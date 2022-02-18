@@ -2,7 +2,8 @@
 normalmente é o "Hello World!". Neste primeiro problema tudo o que 
 você precisa fazer é imprimir esta mensagem na tela. */
 //comentando uma única linha
-/* comentando um bloco de linhas */
+/* comentando um bloco de linhas 
+alteração teste git */
 
 #include<stdio.h> //biblioteca para funções de entrada e saida de dados
 
