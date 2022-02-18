@@ -1,0 +1,58 @@
+/* 
+Resolução comentada do exerício 1002, das atividades do URI. 
+Este comando, torna blocos de linhas em comentários.
+\\ Este comando, transforma apenas a linha em comentário. 
+Lembrem-se do ; no final de cada comando, dentro do main. 
+*/ 
+
+/* Comentário de bloco */
+
+#include <stdio.h> //biblioteca dos comandos de entrada e saída (printf() e scanf()).
+#include <stdlib.h> //biblioteca responsável pelo comando system();
+#include <math.h> //biblioteca dos comandos matemáticos, neste caso, pow.
+#include <locale.h> //biblioteca para uso da acentuação dentro do printf.
+#define PI 3.14159 //declaração da constante PI. Por convenção, utiliza-se identificadores com letras maiusculas, para facil localização das constantes no fonte. 
+
+int main() { /* Não há diferenças entre a declaração "main()" e "int main()". 
+            Em todo programa C deve existir uma única função main(). 
+			A }  marca o fim do programa. */
+	
+	setlocale(LC_ALL, "Portuguese"); //habilita a acentuação para o português e está ligada a biblioteca <locale.h>
+	
+	double raio, area; /*declaração de variáveis. 
+	O exercício especifica o uso do tipo double, que se assemelha ao tipo float, porém, permite maior precisão numérica, visto alocar maior espaço na memória. 
+	Em c, o "_" pode ser utilizado como identificador. */
+	
+	printf("Digite o valor do raio:"); //Exibe o texto na tela. No URI, por não solicitar informações ao usuário, o printf é dispensado. 
+	
+	scanf("%lf", &raio); /*Salva o valor digitado na tela dentro da variável especificada. 
+	O código de formatação para variável double, ponto flutuante longo, é %lf.
+	A varíavel deve ser precedida do operador de endereço & */
+	
+    area = pow(raio,2) * PI; 
+	/* Realiza o cáculo da área utilizando a função pow, as variáveis raio e area, a constante PI e o substituto do <-, =.
+	Existem outras formas de se realizar este calculo:
+	
+	sem a função pow: area = raio * raio * PI
+	sem a constante: area = raio * raio * 3.14159 ou pow(raio,2) * 3.14159
+	
+	*/
+    
+    
+	printf("A=%.4lf\n", area); 
+	/*Exibe o texto na tela e neste caso, o valor da varíavel area. 
+	Como trabalhamos com números decimais é possível definir quantos a quantidade de números após a vírgula, para isso, acrescente ao código de formatação: %.4lf, por exemplo.  
+	O valor da varíavel será apresentado no local onde se encontra o código de formatação. 
+	\n possibilita a quebra de linha e é obrigatória nos algoritmos enviados para o URI.
+	É possível não utilizar a variável area realizando a soma diretamente no printf:  	printf("A=%.4lf\n", pow(raio,2) * PI); .	
+	*/
+	
+	system("pause"); 
+	//Solicita ao computador uma pausa até que alguma tecla seja pressionada no teclado. Em nosso caso, desnecessário, porém, não representará erro de compilação. 
+	//Está vinculada a biblioteca <stdlib.h>, ou seja, se eu retirar esta linha, poderei retirar também a biblioteca.
+
+    return 0; /*Responsável por: 1. apresentar se o algoritmo compilou com sucesso. 2. Seu resultado poderá ser utilizado em outras funções. Em nosso caso, 
+    desnecessário, porém, não representará erro de compilação. */
+
+
+} //Finaliza o programa.
