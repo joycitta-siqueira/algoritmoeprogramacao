@@ -32,6 +32,7 @@ git add .
 git commit -m "Adicionado o .gitignore"
 git push origin main
 ```
+Formatação básica de texto no read.me: https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
 ### Lista de exercícios: https://www.beecrowd.com.br/judge/pt/problems/index/1 -> 1000 a 1007 - todos devem ser postados no GitHub
 ### Compilador Online: https://www.onlinegdb.com/online_c_compiler
